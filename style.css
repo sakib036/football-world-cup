@@ -23,16 +23,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 80px;
-
+    padding: auto;
     border-radius: 50px;
+    padding-bottom: 50px;
     margin-bottom: 50px;
 }
 
 .heder-title {
     width: 50%;
-    padding-right: 2vw;
+    padding: 3vw;
 }
 
 .heder-title h1 {
@@ -42,7 +41,7 @@ header {
 }
 
 .heder-title p {
-    font-size: 1.5vw;
+    font-size: 2vw;
     color: white;
 
 }
@@ -64,10 +63,12 @@ header {
 
 .header-img {
     width: 50%;
+
 }
 
 .header-img img {
     width: 100%;
+    border-radius: 0 10px 10px 0;
 
 }
 
@@ -104,13 +105,23 @@ header {
     background-color: white;
     text-align: center;
     font-size: 18px;
-    padding: 30px 10px;
+    padding: 20px 10px;
     border-radius: 5px;
+    margin-top: 18px;
 }
+
+.nav a {
+    color: black;
+}
+
 
 .nav:hover {
     transform: scaleX(1.1);
     background-color: red;
+    color: white;
+}
+
+.nav:hover a {
     color: white;
 }
 
@@ -181,5 +192,193 @@ footer {
 
 .social-icon>a>i {
     font-size: 2vw;
-    padding: 10px
+    padding: 10px;
+    color: white;
+}
+
+/* ====================
+                         For Mobile Screen
+                         ============================== */
+@media only screen and (max-width: 576px) {
+    .top-body {
+        width: 90%;
+    }
+
+    header {
+        width: auto;
+        height: auto;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+
+    }
+
+    .heder-title {
+        width: 80%;
+        padding-right: 2vw;
+    }
+
+    .heder-title h1 {
+        font-size: 8vw;
+        margin-bottom: 0;
+    }
+
+    .heder-p-area {
+        width: 70vw;
+        height: 14vw;
+        border: 1px solid blanchedalmond;
+        overflow: hidden;
+
+    }
+
+    .text-ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .heder-title p {
+        font-size: 4vw;
+
+    }
+
+    .header-img {
+        width: 100%;
+    }
+
+    .header-img img {
+        width: 100%;
+        border-radius: 0 0 50px 50px;
+        margin: auto;
+    }
+
+
+    .main-body {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
+    }
+
+    .left-side-nav {
+        width: auto;
+        padding: 0;
+        height: auto;
+
+    }
+
+    .nav {
+        height: auto;
+        padding: 2vw 5vw;
+        margin-top: 2px;
+        border: 2px solid black;
+    }
+
+    .nav a {
+        color: black;
+    }
+
+    .nav:hover {
+        transform: scaleX(1.1);
+        background-color: red;
+
+    }
+
+    .nav:hover a {
+        color: white;
+    }
+
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+
+    .main-cont-card {
+        width: auto;
+    }
+
+    /* ====================
+                         Footer for mobile
+                         ============================== */
+    footer {
+        height: auto;
+        font-size: 6vw;
+    }
+
+    .footer-content a {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .social-icon>a>i {
+        font-size: 10vw;
+        padding: 10px;
+        color: white;
+
+    }
+}
+
+/* ====================
+                         For Tablet
+                         ============================== */
+@media screen and (min-width: 577px) and (max-width:992px) {
+    header {
+        height: auto;
+        margin-bottom: 25px;
+    }
+
+    .button-live a {
+        font-size: 3vw;
+    }
+
+    .main-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side-nav {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        height: auto;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .nav {
+        border: 1px solid grey;
+        width: 30%;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+
+    .main-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        font-size: 3vw;
+        height: auto;
+    }
+
+    .social-icon>a>i {
+        font-size: 4vw;
+    }
 }
